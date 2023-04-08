@@ -26,10 +26,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.horizontalScrollView.visibility = View.INVISIBLE
 
     }
     fun setDefultVisibility(){
+        binding.horizontalScrollView.visibility = View.VISIBLE
         binding.imageViewResultL.visibility = View.VISIBLE
         binding.imageViewResultR.visibility = View.VISIBLE
         binding.linearLayoutResult1.visibility = View.VISIBLE
