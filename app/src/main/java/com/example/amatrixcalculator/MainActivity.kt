@@ -1,8 +1,10 @@
 package com.example.amatrixcalculator
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.amatrixcalculator.databinding.ActivityMainBinding
@@ -27,7 +29,20 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
+    fun setDefultVisibility(){
+        binding.imageViewResultL.visibility = View.VISIBLE
+        binding.imageViewResultR.visibility = View.VISIBLE
+        binding.linearLayoutResult1.visibility = View.VISIBLE
+        binding.linearLayoutResult2.visibility = View.VISIBLE
+        binding.linearLayoutResult3.visibility = View.VISIBLE
+        binding.textViewEqual2.visibility = View.VISIBLE
+        binding.imageViewResultInverseL.visibility = View.VISIBLE
+        binding.imageViewResultInverseR.visibility = View.VISIBLE
+        binding.linearLayoutResultInv1.visibility = View.VISIBLE
+        binding.linearLayoutResultInv2.visibility = View.VISIBLE
+        binding.linearLayoutResultInv3.visibility = View.VISIBLE
+        binding.textViewNumberResult.visibility = View.VISIBLE
+    }
     fun onDet(view: View) {
         getNumbers()
         var temp = 0
@@ -43,11 +58,31 @@ class MainActivity : AppCompatActivity() {
             return
         }
         assignmentIntMatrix()
-        Toast.makeText(
-            this@MainActivity,
-            Determinant.determinantOfMatrix(matrixInt, 3).toString(),
-            Toast.LENGTH_LONG
-        ).show()
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
+            }
+        }
+        setDefultVisibility()
+        binding.textViewOperation.text = "Det"
+        binding.imageViewResultL.visibility = View.GONE
+        binding.imageViewResultR.visibility = View.GONE
+        binding.linearLayoutResult1.visibility = View.GONE
+        binding.linearLayoutResult2.visibility = View.GONE
+        binding.linearLayoutResult3.visibility = View.GONE
+        binding.textViewEqual2.visibility = View.GONE
+        binding.imageViewResultInverseL.visibility = View.GONE
+        binding.imageViewResultInverseR.visibility = View.GONE
+        binding.linearLayoutResultInv1.visibility = View.GONE
+        binding.linearLayoutResultInv2.visibility = View.GONE
+        binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.textViewNumberResult.text = Determinant.determinantOfMatrix(matrixInt, 3).toString()
         setDefult()
     }
 
@@ -66,14 +101,114 @@ class MainActivity : AppCompatActivity() {
             return
         }
         assignmentIntMatrix()
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
+            }
+        }
+        setDefultVisibility()
+        binding.textViewOperation.text = "Rank"
+        binding.imageViewResultL.visibility = View.GONE
+        binding.imageViewResultR.visibility = View.GONE
+        binding.linearLayoutResult1.visibility = View.GONE
+        binding.linearLayoutResult2.visibility = View.GONE
+        binding.linearLayoutResult3.visibility = View.GONE
+        binding.textViewEqual2.visibility = View.GONE
+        binding.imageViewResultInverseL.visibility = View.GONE
+        binding.imageViewResultInverseR.visibility = View.GONE
+        binding.linearLayoutResultInv1.visibility = View.GONE
+        binding.linearLayoutResultInv2.visibility = View.GONE
+        binding.linearLayoutResultInv3.visibility = View.GONE
         if (Determinant.determinantOfMatrix(matrixInt, 3) != 0) {
-            Toast.makeText(this@MainActivity, "3", Toast.LENGTH_LONG).show()
+            binding.textViewNumberResult.text = "3"
         } else {
-            Toast.makeText(
-                this@MainActivity,
-                Rank.rankOfMatrix(matrixInt).toString(),
-                Toast.LENGTH_LONG
-            ).show()
+            binding.textViewNumberResult.text = Rank.rankOfMatrix(matrixInt).toString()
+        }
+        setDefult()
+    }
+
+    fun onInverse(view: View) {
+        getNumbers()
+        var temp = 0
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                if (editText[i][j] == "") {
+                    ++temp
+                }
+            }
+        }
+        if (temp != 0) {
+            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            return
+        }
+        assignmentIntMatrix()
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
+            }
+        }
+        if (Determinant.determinantOfMatrix(matrixInt,3) == 0){
+            setDefultVisibility()
+            binding.textViewNumberResult.text = " there is no inverse."
+            binding.textViewOperation.text = "Inverse"
+            binding.imageViewResultL.visibility = View.GONE
+            binding.imageViewResultR.visibility = View.GONE
+            binding.linearLayoutResult1.visibility = View.GONE
+            binding.linearLayoutResult2.visibility = View.GONE
+            binding.linearLayoutResult3.visibility = View.GONE
+            binding.textViewEqual2.visibility = View.GONE
+            binding.imageViewResultInverseL.visibility = View.GONE
+            binding.imageViewResultInverseR.visibility = View.GONE
+            binding.linearLayoutResultInv1.visibility = View.GONE
+            binding.linearLayoutResultInv2.visibility = View.GONE
+            binding.linearLayoutResultInv3.visibility = View.GONE
+            setDefult()
+            return
+        }
+        setDefult()
+        getNumbers()
+        assignmentIntMatrix()
+        setDefultVisibility()
+        binding.textViewOperation.text = "Inverse"
+        binding.textViewNumberResult.visibility = View.GONE
+        var inverseMatrixInString = Inverse.inverseOfMatrixInString(matrixInt, 3)
+        setDefult()
+        getNumbers()
+        assignmentIntMatrix()
+        var inverseMatrixInFloat = Inverse.inverseOfMatrixInFloat(matrixInt, 3)
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textViewResult${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = inverseMatrixInString[i][j]
+            }
+        }
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textViewResultInverse${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = inverseMatrixInFloat[i][j].toString()
+            }
         }
         setDefult()
     }
@@ -93,47 +228,38 @@ class MainActivity : AppCompatActivity() {
             return
         }
         assignmentIntMatrix()
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
+            }
+        }
+        setDefultVisibility()
+        binding.textViewOperation.text = "T"
+        binding.textViewEqual2.visibility = View.GONE
+        binding.imageViewResultInverseL.visibility = View.GONE
+        binding.imageViewResultInverseR.visibility = View.GONE
+        binding.linearLayoutResultInv1.visibility = View.GONE
+        binding.linearLayoutResultInv2.visibility = View.GONE
+        binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.textViewNumberResult.visibility = View.GONE
         var Tmatrix = Transpose.transposeOfMatrix(matrixInt, 3)
-        var matInString = ""
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
-                matInString += "${Tmatrix[i][j]}     "
-            }
-            matInString += "\n"
-        }
-        binding.textView.text = matInString
-        setDefult()
-    }
-
-    fun onInverse(view: View) {
-        getNumbers()
-        var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
-                if (editText[i][j] == "") {
-                    ++temp
-                }
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textViewResult${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = Tmatrix[i][j].toString()
             }
         }
-        if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
-            return
-        }
-        assignmentIntMatrix()
-        if (Determinant.determinantOfMatrix(matrixInt,3) == 0){
-            binding.textView.text = "there is no inverse."
-            setDefult()
-            return
-        }
-        var inverseMatrix = Inverse.inverseOfMatrixInFloat(matrixInt, 3)
-        var matInString = ""
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
-                matInString += "${inverseMatrix[i][j]}     "
-            }
-            matInString += "\n"
-        }
-        binding.textView.text = matInString
         setDefult()
     }
 
@@ -152,15 +278,38 @@ class MainActivity : AppCompatActivity() {
             return
         }
         assignmentIntMatrix()
-        var cofactorMatrix = Cofactor.cofactorOfMatrix(matrixInt, 3)
-        var matInString = ""
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
-                matInString += "${cofactorMatrix[i][j]}     "
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
             }
-            matInString += "\n"
         }
-        binding.textView.text = matInString
+        setDefultVisibility()
+        binding.textViewOperation.text = "Cofactor"
+        binding.textViewEqual2.visibility = View.GONE
+        binding.imageViewResultInverseL.visibility = View.GONE
+        binding.imageViewResultInverseR.visibility = View.GONE
+        binding.linearLayoutResultInv1.visibility = View.GONE
+        binding.linearLayoutResultInv2.visibility = View.GONE
+        binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.textViewNumberResult.visibility = View.GONE
+        var CofMatrix = Cofactor.cofactorOfMatrix(matrixInt, 3)
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textViewResult${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = CofMatrix[i][j].toString()
+            }
+        }
         setDefult()
     }
 
@@ -179,16 +328,38 @@ class MainActivity : AppCompatActivity() {
             return
         }
         assignmentIntMatrix()
-        var adjointMatrix = Adjoint.adjointOfMatrix(matrixInt, 3)
-        var matInString = ""
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
-                matInString += "${adjointMatrix[i][j]}     "
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
             }
-            matInString += "\n"
         }
-        binding.textView.text = matInString
-        setDefult()
+        setDefultVisibility()
+        binding.textViewOperation.text = "Adj"
+        binding.textViewEqual2.visibility = View.GONE
+        binding.imageViewResultInverseL.visibility = View.GONE
+        binding.imageViewResultInverseR.visibility = View.GONE
+        binding.linearLayoutResultInv1.visibility = View.GONE
+        binding.linearLayoutResultInv2.visibility = View.GONE
+        binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.textViewNumberResult.visibility = View.GONE
+        var AdjMatrix = Adjoint.adjointOfMatrix(matrixInt, 3)
+        for (i: Int in 0 until 3) {
+            for (j: Int in 0 until 3) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textViewResult${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).text = AdjMatrix[i][j].toString()
+            }
+        }
     }
 
     fun getNumbers() {

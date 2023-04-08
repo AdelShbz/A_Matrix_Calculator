@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/me/Android Projects/A Matrix Calculator/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
+        <entry key="..\:/me/Android Projects/A Matrix Calculator/app/src/main/res/drawable/ic_left_parenthesis.xml" value="0.26" />
+        <entry key="..\:/me/Android Projects/A Matrix Calculator/app/src/main/res/drawable/ic_right_parenthesis.xml" value="0.261" />
+        <entry key="..\:/me/Android Projects/A Matrix Calculator/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
