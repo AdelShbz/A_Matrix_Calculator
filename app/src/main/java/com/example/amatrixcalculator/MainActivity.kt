@@ -1,8 +1,11 @@
 package com.example.amatrixcalculator
 
+import android.content.Context
 import android.opengl.Visibility
+
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -29,7 +32,8 @@ class MainActivity : AppCompatActivity() {
         binding.horizontalScrollView.visibility = View.INVISIBLE
 
     }
-    fun setDefultVisibility(){
+
+    fun setDefultVisibility() {
         binding.horizontalScrollView.visibility = View.VISIBLE
         binding.imageViewResultL.visibility = View.VISIBLE
         binding.imageViewResultR.visibility = View.VISIBLE
@@ -43,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv2.visibility = View.VISIBLE
         binding.linearLayoutResultInv3.visibility = View.VISIBLE
         binding.textViewNumberResult.visibility = View.VISIBLE
+    }
+    fun hideKeyboard(view: View){
+        val imm: InputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
     fun onDet(view: View) {
         getNumbers()
@@ -58,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
@@ -101,6 +111,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
@@ -148,6 +159,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
@@ -160,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
             }
         }
-        if (Determinant.determinantOfMatrix(matrixInt,3) == 0){
+        if (Determinant.determinantOfMatrix(matrixInt, 3) == 0) {
             setDefultVisibility()
             binding.textViewNumberResult.text = " there is no inverse."
             binding.textViewOperation.text = "Inverse"
@@ -228,6 +240,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
@@ -278,6 +291,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
@@ -328,6 +342,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        hideKeyboard(view)
         assignmentIntMatrix()
         for (i: Int in 0 until 3) {
             for (j: Int in 0 until 3) {
