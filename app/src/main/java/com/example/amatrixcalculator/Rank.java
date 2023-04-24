@@ -38,7 +38,9 @@ public class Rank {
     {
 
         int rank = C;
-
+        int[][] matTemp = mat;
+        if(Determinant.determinantOfMatrix(matTemp,C) != 0)
+            return C;
         for (int row = 0; row < rank; row++)
         {
 

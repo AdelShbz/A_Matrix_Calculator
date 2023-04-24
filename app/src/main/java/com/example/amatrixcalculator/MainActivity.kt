@@ -4,6 +4,7 @@ import android.content.Context
 import android.opengl.Visibility
 
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.horizontalScrollView.visibility = View.INVISIBLE
-
     }
 
     fun setDefultVisibility() {
@@ -137,11 +137,8 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
-        if (Determinant.determinantOfMatrix(matrixInt, 3) != 0) {
-            binding.textViewNumberResult.text = "3"
-        } else {
-            binding.textViewNumberResult.text = Rank.rankOfMatrix(matrixInt).toString()
-        }
+        binding.textViewNumberResult.text = Rank.rankOfMatrix(matrixInt).toString()
+
         setDefult()
     }
 
