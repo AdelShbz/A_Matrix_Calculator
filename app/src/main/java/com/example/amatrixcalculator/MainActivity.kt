@@ -15,15 +15,19 @@ import com.example.amatrixcalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    var row:Int = 3
+    var col:Int = 3
     var editText = arrayOf(
-        arrayOf("", "", ""),
-        arrayOf("", "", ""),
-        arrayOf("", "", "")
+        arrayOf("", "", "", ""),
+        arrayOf("", "", "", ""),
+        arrayOf("", "", "", ""),
+        arrayOf("", "", "", "")
     )
     var matrixInt = arrayOf(
-        intArrayOf(0, 0, 0),
-        intArrayOf(0, 0, 0),
-        intArrayOf(0, 0, 0),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(0, 0, 0, 0),
+        intArrayOf(0, 0, 0, 0)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.horizontalScrollView.visibility = View.INVISIBLE
+        goneAllEditText()
+        showUntilRow_Col(row,col)
     }
 
     fun setDefultVisibility() {
@@ -406,5 +412,68 @@ class MainActivity : AppCompatActivity() {
                 matrixInt[i][j] = 0
             }
         }
+    }
+
+    fun goneAllEditText(){
+        for (i: Int in 0 until 4){
+            for (j: Int in 0 until 4){
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "editTextNumberSigned${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<EditText>(resourceId).visibility = View.GONE
+            }
+        }
+    }
+    fun showUntilRow_Col(Row:Int, Col:Int){
+        for (i: Int in 0 until Row){
+            for (j: Int in 0 until Col){
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "editTextNumberSigned${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<EditText>(resourceId).visibility = View.VISIBLE
+            }
+        }
+    }
+    fun addRow(view: View){
+        if (row >= 4){
+            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            return
+        }
+        goneAllEditText()
+        row++
+        showUntilRow_Col(row,col)
+    }
+    fun removeRow(view: View){
+        if (row <= 1){
+            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            return
+        }
+        goneAllEditText()
+        row--
+        showUntilRow_Col(row,col)
+    }
+    fun addCol(view: View){
+        if (col >= 4){
+            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            return
+        }
+        goneAllEditText()
+        col++
+        showUntilRow_Col(row,col)
+    }
+    fun removeCol(view: View){
+        if (col <= 1){
+            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            return
+        }
+        goneAllEditText()
+        col--
+        showUntilRow_Col(row,col)
     }
 }
