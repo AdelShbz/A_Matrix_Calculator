@@ -337,8 +337,8 @@ class MainActivity : AppCompatActivity() {
     fun onTranspose(view: View) {
         getNumbers()
         var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 if (editText[i][j] == "") {
                     ++temp
                 }
@@ -350,8 +350,9 @@ class MainActivity : AppCompatActivity() {
         }
         hideKeyboard(view)
         assignmentIntMatrix()
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        visibleTextViews(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textView${i}${j}",
@@ -369,10 +370,12 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.linearLayoutResultInv4.visibility = View.GONE
         binding.textViewNumberResult.visibility = View.GONE
-        var Tmatrix = Transpose.transposeOfMatrix(matrixInt, 3)
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        var Tmatrix = Transpose.transposeOfMatrix(matrixInt, row, col)
+        visibleTextViewResults(col, row)
+        for (i: Int in 0 until col) {
+            for (j: Int in 0 until row) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textViewResult${i}${j}",
