@@ -1,8 +1,8 @@
 package com.example.amatrixcalculator;
 //Rank class
 public class Rank {
-    static final int R = 3;
-    static final int C = 3;
+//    static final int R = 3;
+//    static final int C = 3;
 
     // function for exchanging two rows
     // of a matrix
@@ -34,7 +34,7 @@ public class Rank {
     }
 
     // function for finding rank of matrix
-    static int rankOfMatrix(int mat[][])
+    static int rankOfMatrix(int mat[][], int R, int C)
     {
 
         int rank = C;
