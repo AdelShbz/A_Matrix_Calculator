@@ -391,8 +391,8 @@ class MainActivity : AppCompatActivity() {
     fun onCofactor(view: View) {
         getNumbers()
         var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 if (editText[i][j] == "") {
                     ++temp
                 }
@@ -402,10 +402,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        if (row != col){
+            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            return
+        }
         hideKeyboard(view)
         assignmentIntMatrix()
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        visibleTextViews(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textView${i}${j}",
@@ -423,10 +428,12 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.linearLayoutResultInv4.visibility = View.GONE
         binding.textViewNumberResult.visibility = View.GONE
-        var CofMatrix = Cofactor.cofactorOfMatrix(matrixInt, 3)
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        var CofMatrix = Cofactor.cofactorOfMatrix(matrixInt, row)
+        visibleTextViewResults(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textViewResult${i}${j}",
@@ -442,8 +449,8 @@ class MainActivity : AppCompatActivity() {
     fun onAdjoint(view: View) {
         getNumbers()
         var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 if (editText[i][j] == "") {
                     ++temp
                 }
@@ -453,10 +460,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        if (row != col){
+            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            return
+        }
         hideKeyboard(view)
         assignmentIntMatrix()
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        visibleTextViews(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textView${i}${j}",
@@ -474,10 +486,12 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.linearLayoutResultInv4.visibility = View.GONE
         binding.textViewNumberResult.visibility = View.GONE
-        var AdjMatrix = Adjoint.adjointOfMatrix(matrixInt, 3)
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        var AdjMatrix = Adjoint.adjointOfMatrix(matrixInt, row)
+        visibleTextViewResults(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textViewResult${i}${j}",
@@ -487,6 +501,7 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(resourceId).text = AdjMatrix[i][j].toString()
             }
         }
+        setDefult()
     }
 
     fun getNumbers() {
