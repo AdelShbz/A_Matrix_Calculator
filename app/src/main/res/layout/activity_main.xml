@@ -34,36 +34,48 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned01"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned02"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned03"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -81,36 +93,48 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned11"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned12"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned13"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,36 +153,48 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned21"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned22"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned23"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -176,36 +212,48 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned31"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned32"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextNumberSigned33"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:imeOptions="actionNext"
                     android:ems="10"
-                    android:inputType="numberSigned" />
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:textColor="#838383"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
