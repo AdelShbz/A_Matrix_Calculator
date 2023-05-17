@@ -60,10 +60,14 @@ class MainActivity : AppCompatActivity() {
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
     fun onDet(view: View) {
+        if (row != col){
+            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            return
+        }
         getNumbers()
         var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 if (editText[i][j] == "") {
                     ++temp
                 }
@@ -75,8 +79,8 @@ class MainActivity : AppCompatActivity() {
         }
         hideKeyboard(view)
         assignmentIntMatrix()
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textView${i}${j}",
@@ -84,6 +88,12 @@ class MainActivity : AppCompatActivity() {
                         this.packageName
                     )
                 findViewById<TextView>(resourceId).text = matrixInt[i][j].toString()
+            }
+        }
+        val finalMatrix = Array(row) { IntArray(col) }
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
+                finalMatrix[i][j] = matrixInt[i][j]
             }
         }
         setDefultVisibility()
@@ -99,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
-        binding.textViewNumberResult.text = Determinant.determinantOfMatrix(matrixInt, 3).toString()
+        binding.textViewNumberResult.text = Determinant.determinantOfMatrix(finalMatrix, row).toString()
         setDefult()
     }
 
@@ -382,9 +392,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getNumbers() {
-
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "editTextNumberSigned${i}${j}",
@@ -398,8 +407,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun assignmentIntMatrix() {
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 matrixInt[i][j] = editText[i][j].toInt()
             }
         }
