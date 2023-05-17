@@ -46,12 +46,14 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResult1.visibility = View.VISIBLE
         binding.linearLayoutResult2.visibility = View.VISIBLE
         binding.linearLayoutResult3.visibility = View.VISIBLE
+        binding.linearLayoutResult4.visibility = View.VISIBLE
         binding.textViewEqual2.visibility = View.VISIBLE
         binding.imageViewResultInverseL.visibility = View.VISIBLE
         binding.imageViewResultInverseR.visibility = View.VISIBLE
         binding.linearLayoutResultInv1.visibility = View.VISIBLE
         binding.linearLayoutResultInv2.visibility = View.VISIBLE
         binding.linearLayoutResultInv3.visibility = View.VISIBLE
+        binding.linearLayoutResultInv4.visibility = View.VISIBLE
         binding.textViewNumberResult.visibility = View.VISIBLE
     }
     fun hideKeyboard(view: View){
@@ -59,11 +61,34 @@ class MainActivity : AppCompatActivity() {
             getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
-    fun onDet(view: View) {
-        if (row != col){
-            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
-            return
+    fun goneAllTextViews(){
+        for (i: Int in 0 until 4) {
+            for (j: Int in 0 until 4) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).visibility = View.GONE
+            }
         }
+    }
+    fun visibleTextView(Row:Int , Col:Int){
+        goneAllTextViews()
+        for (i: Int in 0 until Row) {
+            for (j: Int in 0 until Col) {
+                val resourceId =
+                    this.resources.getIdentifier(
+                        "textView${i}${j}",
+                        "id",
+                        this.packageName
+                    )
+                findViewById<TextView>(resourceId).visibility = View.VISIBLE
+            }
+        }
+    }
+    fun onDet(view: View) {
         getNumbers()
         var temp = 0
         for (i: Int in 0 until row) {
@@ -77,8 +102,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        if (row != col){
+            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            return
+        }
         hideKeyboard(view)
         assignmentIntMatrix()
+        visibleTextView(row, col)
         for (i: Int in 0 until row) {
             for (j: Int in 0 until col) {
                 val resourceId =
@@ -103,12 +133,14 @@ class MainActivity : AppCompatActivity() {
         binding.linearLayoutResult1.visibility = View.GONE
         binding.linearLayoutResult2.visibility = View.GONE
         binding.linearLayoutResult3.visibility = View.GONE
+        binding.linearLayoutResult4.visibility = View.GONE
         binding.textViewEqual2.visibility = View.GONE
         binding.imageViewResultInverseL.visibility = View.GONE
         binding.imageViewResultInverseR.visibility = View.GONE
         binding.linearLayoutResultInv1.visibility = View.GONE
         binding.linearLayoutResultInv2.visibility = View.GONE
         binding.linearLayoutResultInv3.visibility = View.GONE
+        binding.linearLayoutResultInv4.visibility = View.GONE
         binding.textViewNumberResult.text = Determinant.determinantOfMatrix(finalMatrix, row).toString()
         setDefult()
     }
@@ -116,8 +148,8 @@ class MainActivity : AppCompatActivity() {
     fun onRank(view: View) {
         getNumbers()
         var temp = 0
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 if (editText[i][j] == "") {
                     ++temp
                 }
@@ -127,10 +159,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
             return
         }
+        if (row != col){
+            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            return
+        }
         hideKeyboard(view)
         assignmentIntMatrix()
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        visibleTextView(row, col)
+        for (i: Int in 0 until row) {
+            for (j: Int in 0 until col) {
                 val resourceId =
                     this.resources.getIdentifier(
                         "textView${i}${j}",
@@ -415,8 +452,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setDefult() {
-        for (i: Int in 0 until 3) {
-            for (j: Int in 0 until 3) {
+        for (i: Int in 0 until 4) {
+            for (j: Int in 0 until 4) {
                 editText[i][j] = ""
                 matrixInt[i][j] = 0
             }
@@ -454,6 +491,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
             return
         }
+        for (i: Int in 0 until col){
+            val resourceId =
+                this.resources.getIdentifier(
+                    "editTextNumberSigned${row}${i}",
+                    "id",
+                    this.packageName
+                )
+            findViewById<EditText>(resourceId).setText("")
+        }
         goneAllEditText()
         row++
         showUntilRow_Col(row,col)
@@ -471,6 +517,15 @@ class MainActivity : AppCompatActivity() {
         if (col >= 4){
             Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
             return
+        }
+        for (i: Int in 0 until row){
+            val resourceId =
+                this.resources.getIdentifier(
+                    "editTextNumberSigned${i}${col}",
+                    "id",
+                    this.packageName
+                )
+            findViewById<EditText>(resourceId).setText("")
         }
         goneAllEditText()
         col++

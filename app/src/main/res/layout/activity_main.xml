@@ -34,6 +34,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -42,6 +43,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -50,6 +52,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -58,6 +61,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
             </LinearLayout>
@@ -77,6 +81,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -85,6 +90,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -93,6 +99,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -101,6 +108,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
             </LinearLayout>
@@ -121,6 +129,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -129,6 +138,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -137,6 +147,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -145,6 +156,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
             </LinearLayout>
@@ -164,6 +176,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -172,6 +185,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -180,6 +194,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
 
@@ -188,6 +203,7 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:imeOptions="actionNext"
                     android:ems="10"
                     android:inputType="numberSigned" />
             </LinearLayout>
@@ -342,6 +358,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -350,6 +367,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -358,6 +376,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -375,6 +403,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -383,6 +412,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -391,6 +421,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -407,6 +447,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -415,6 +456,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -423,6 +465,60 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -463,6 +559,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -471,6 +568,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -479,6 +577,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -496,6 +604,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -504,6 +613,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -512,6 +622,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -529,6 +649,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -537,6 +658,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -545,6 +667,61 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutResult4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewResult03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResult33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -585,6 +762,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -593,6 +771,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -601,6 +780,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -618,6 +807,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -626,6 +816,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -634,6 +825,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -651,6 +852,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -659,6 +861,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
 
@@ -667,6 +870,61 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutResultInv4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewResultInverse03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="22"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewResultInverse33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
                     android:text="22"
                     android:textSize="20sp" />
             </LinearLayout>
