@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه ها را پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         hideKeyboard(view)
@@ -198,11 +198,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه ها را پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         if (row != col){
-            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"ماتریس مربعی نیست.", Toast.LENGTH_SHORT).show()
             return
         }
         hideKeyboard(view)
@@ -255,11 +255,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه هارا پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         if (row != col){
-            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"ماتریس مربعی نیست.", Toast.LENGTH_SHORT).show()
             return
         }
         hideKeyboard(view)
@@ -345,7 +345,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه هارا پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         hideKeyboard(view)
@@ -399,11 +399,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه هارا پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         if (row != col){
-            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"ماتریس مربعی نیست.", Toast.LENGTH_SHORT).show()
             return
         }
         hideKeyboard(view)
@@ -457,11 +457,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (temp != 0) {
-            Toast.makeText(this@MainActivity, "is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "همه درایه هارا پر کنید.", Toast.LENGTH_LONG).show()
             return
         }
         if (row != col){
-            Toast.makeText(this,"The matrix is not square", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"ماتریس مربعی نیست.", Toast.LENGTH_SHORT).show()
             return
         }
         hideKeyboard(view)
@@ -565,7 +565,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun addRow(view: View){
         if (row >= 4){
-            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"نهایت ابعاد 4*4 می باشد.", Toast.LENGTH_SHORT).show()
             return
         }
         for (i: Int in 0 until col){
@@ -583,7 +583,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun removeRow(view: View){
         if (row <= 1){
-            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"حداقل ابعاد 1*1 می باشد.", Toast.LENGTH_SHORT).show()
             return
         }
         goneAllEditText()
@@ -592,7 +592,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun addCol(view: View){
         if (col >= 4){
-            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"نهایت ابعاد 4*4 می باشد.", Toast.LENGTH_SHORT).show()
             return
         }
         for (i: Int in 0 until row){
@@ -610,7 +610,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun removeCol(view: View){
         if (col <= 1){
-            Toast.makeText(this,"0 <= row <= 4 and 0 <= col <= 4", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"حداقل ابعاد 1*1 می باشد.", Toast.LENGTH_SHORT).show()
             return
         }
         goneAllEditText()
