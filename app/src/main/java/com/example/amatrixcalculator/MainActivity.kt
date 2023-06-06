@@ -226,7 +226,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         setDefultVisibility()
-        binding.textViewOperation.text = "Det"
+        binding.textViewOperation.text = "Determinant"
         binding.imageViewResultL.visibility = View.GONE
         binding.imageViewResultR.visibility = View.GONE
         binding.linearLayoutResult1.visibility = View.GONE
@@ -363,7 +363,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         setDefultVisibility()
-        binding.textViewOperation.text = "T"
+        binding.textViewOperation.text = "Transpose"
         binding.textViewEqual2.visibility = View.GONE
         binding.imageViewResultInverseL.visibility = View.GONE
         binding.imageViewResultInverseR.visibility = View.GONE
@@ -479,7 +479,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         setDefultVisibility()
-        binding.textViewOperation.text = "Adj"
+        binding.textViewOperation.text = "Adjoint"
         binding.textViewEqual2.visibility = View.GONE
         binding.imageViewResultInverseL.visibility = View.GONE
         binding.imageViewResultInverseR.visibility = View.GONE
